@@ -1,2 +1,1 @@
-# webpack.scorm
-webpack
+# scorm.webpack
