@@ -19,40 +19,12 @@
 }
 
 svg foreignObject {
-    position: relative;
     line-height: 1.3;
     overflow: visible;
 }
 
-svg.editor foreignObject::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-}
-
-svg.editor g[id^="icdt-"] foreignObject::after {
-    display: none;
-}
-
-svg.editor foreignObject>[data-node="test"] {
-    border: 1px dashed #be5dba;
-}
-
-svg.viewer foreignObject.interactive-click::after,
-svg.viewer foreignObject.variable-click::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
+svg.viewer foreignObject .ondrag-item {
+    cursor: grab;
 }
 
 svg foreignObject input[type="text"],
