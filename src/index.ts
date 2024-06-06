@@ -20,5 +20,5 @@ window.addEventListener('load', () => {
     icdt_Run.data = _board_content;
 
     //
-    icdt_Run.runSlide(1);
+    icdt_Run.runSlide();
 })
