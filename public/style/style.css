@@ -10,6 +10,39 @@ app-root {
     bottom: 0;
 }
 
+#mainAction {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+#mainActionList {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#mainActionList button {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 4px;
+    line-height: 0;
+    background: 0;
+    cursor: pointer;
+}
+
+#mainActionList .page-info {
+    min-width: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #fab11d;
+}
+
+#mainActionList>*:not(:first-child) {
+    margin-left: 16px;
+}
+
 .popup-media-viewer {
     position: fixed;
     top: 0;
