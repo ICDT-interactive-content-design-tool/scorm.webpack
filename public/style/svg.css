@@ -20,7 +20,7 @@
 
 svg foreignObject {
     line-height: 1.3;
-    overflow: visible;
+    overflow: hidden;
 }
 
 svg.viewer foreignObject .ondrag-item {
@@ -41,15 +41,18 @@ svg foreignObject textarea {
 
 svg foreignObject h1,
 svg foreignObject h2,
-svg foreignObject h3,
+svg foreignObject h3 {
+    margin: 20px 0 10px;
+}
+
 svg foreignObject h4,
 svg foreignObject h5,
 svg foreignObject h6 {
-    margin: 0;
+    margin: 10px 0 10px;
 }
 
-svg foreignObject p:last-child {
-    margin: 0;
+svg foreignObject p {
+    margin: 0 0 10px;
 }
 
 svg .hide {
