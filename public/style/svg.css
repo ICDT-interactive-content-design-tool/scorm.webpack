@@ -23,6 +23,15 @@ svg foreignObject {
     overflow: visible;
 }
 
+svg.viewer .hide-on-viewer {
+    display: none;
+}
+
+svg.viewer .interactive-click,
+svg.viewer .variable-click {
+    cursor: pointer;
+}
+
 svg.viewer foreignObject .ondrag-item {
     cursor: grab;
 }
