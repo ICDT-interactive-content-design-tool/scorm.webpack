@@ -130,6 +130,6 @@ out
 .pnp.*
 
 # custom
-files/
-files-*/
-package-*.json
+#files/
+#files-*/
+#package-*.json

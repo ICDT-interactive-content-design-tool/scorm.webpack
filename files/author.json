@@ -1,0 +1,26 @@
+{
+  "CreatedBy": 569,
+  "CreatedDate": "2024-09-16T08:57:09.7109557+07:00",
+  "user": {
+    "id": 569,
+    "name": "Middle Kiên",
+    "email": "haki.kiennt@gmail.com",
+    "avatar": "avatar/2024/07/05/07548ddd-ad6f-4767-9f38-4dd21c501d75.png",
+    "role": 1302
+  },
+  "data": {
+    "id": 3653,
+    "title": "Giới thiệu Tabca - NTKIEN",
+    "size": {
+      "width": 0,
+      "height": 0
+    },
+    "topic_id": 0,
+    "topic_title": null,
+    "category_id": 0,
+    "category_title": null,
+    "createdby": 569,
+    "createdby_name": "Middle Kiên",
+    "createddate": "2024-09-16T08:57:09.69039"
+  }
+}
