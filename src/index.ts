@@ -2,6 +2,7 @@ import * as _ from 'lodash';
 import { icdt } from "../../src/_ICDT/prototype/icdt";
 import { icdt_Run } from "../../src/_ICDT/script/run";
 import { icdt_IDataSlide } from '../../src/_ICDT/interface/IDataSource';
+import { APP_FONT_Content } from '../../src/_ICDT/func/import-font';
 
 window.addEventListener('load', () => {
     icdt.container = '#mainContainer';
@@ -12,7 +13,7 @@ window.addEventListener('load', () => {
     let mainActionList = document.getElementById('mainActionList');
     let slideIdx = 0, slideTotal = 1;
 
-    if (_board_setting?.buttons.paging !== false) {
+    if (_board_setting?.buttons.paging) {
         (() => {
             let button = document.createElement('button');
             let img = new Image();
@@ -65,7 +66,7 @@ window.addEventListener('load', () => {
         })();
     }
 
-    if (_board_setting?.buttons.refresh !== false) {
+    if (_board_setting?.buttons.refresh) {
         (() => {
             let button = document.createElement('button');
             let img = new Image();
@@ -82,7 +83,7 @@ window.addEventListener('load', () => {
         })();
     }
 
-    if (_board_setting?.buttons?.fullscreen !== false) {
+    if (_board_setting?.buttons?.fullscreen) {
         (() => {
             let isFullscreen = () => {
                 return ((element: any) => { return element.fullscreen || element.fullscreenElement || element.webkitFullscreenElement || element.mozFullScreenElement || element.msFullscreenElement ? true : false })(document)
@@ -138,20 +139,26 @@ window.addEventListener('load', () => {
 
     //------------------------------------------
 
-    icdt.config = ((config) => {
-        let { fileuploadurl, readfileuploadurl } = config;
-        return { fileuploadurl, readfileuploadurl }
-    })({
+    let configs = {
         "madonvi": "scorm",
         "tendv": "[SCORM]",
         "weburl": "https://tabca.vn/",
         "fileuploadurl": "/",
         "readfileuploadurl": "files/",
-    });
+        "font_url": "https://www.tabca.vn/fonts",
+    };
+
+    icdt.config = (() => {
+        let { fileuploadurl, readfileuploadurl } = configs;
+        return { fileuploadurl, readfileuploadurl };
+    })();
 
     icdt_Run.data = _board_content;
 
     //
     icdt_Run.runSlide();
 
+    //
+    var fonts = _board_content.fonts || [];
+    APP_FONT_Content(fonts.filter(f => f != 'Roboto'), configs.font_url);
 })
