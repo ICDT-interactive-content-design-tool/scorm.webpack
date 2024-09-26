@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import { icdt, icdt_Run, icdt_IDataSlide, APP_FONT_Content } from "ICDT-core";
+import { icdt, icdt_Run, icdt_IDataSlide, APP_FONT_Content } from "icdt-core";
 
 window.addEventListener('load', () => {
     icdt.container = '#mainContainer';
