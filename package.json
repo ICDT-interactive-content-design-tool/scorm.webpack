@@ -21,7 +21,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "icdt-core": "^1.1.5",
+    "icdt-core": "^1.1.7",
     "jquery": "^3.7.1",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21"
